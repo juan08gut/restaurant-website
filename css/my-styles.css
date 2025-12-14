@@ -1,0 +1,168 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Georgia', serif;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Georgia', serif;
+    line-height: 1.6;
+    color: #000000;
+    background-color: #ffffff;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 30px 30px;
+    font-size: 20px;
+}
+
+h2 {
+    text-align: center;
+    font-size: 40px;
+    text-transform: uppercase;
+}
+
+hr {
+    width: 200px;
+    height: 8px;
+    background-color: #ff0000;
+    border: none;
+    margin: 10px auto 40px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 50px;
+    background:#FCFFD5;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar .logo { 
+    color: #ff0000;  
+    font-family: 'Brush Script MT', cursive;
+    font-weight: bold;
+    font-size: 50px;
+}
+.nav-links { 
+    list-style: none; display: flex; 
+}
+.nav-links li { 
+    margin-left: 20px; 
+}
+.nav-links a { 
+    text-decoration: none; 
+    color: #000000; 
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.nav-links a:hover { 
+    color: #ff0000; 
+}
+
+.welcome-section {
+    position: relative;
+    width: 100%;
+    height: 70vh;
+    overflow: hidden;
+}
+
+.hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FCFFD5;
+    text-align: center;
+}
+
+.hero-content h1 { 
+    font-size: 65px;
+ }
+
+.hero-content p 
+{ font-size: 20px; 
+    margin-bottom: 20px; 
+}
+
+.btn {
+    display: inline-block;
+    background: #ff0000;
+    color: #FCFFD5;
+    padding: 15px 40px;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+.btn:hover {
+    background: #cc0000;
+}
+
+.course-header {
+    background: #ff0000;
+    color: #FCFFD5;
+    padding: 10px 20px;
+    display: inline-block;
+    margin: 30px 0 20px;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-bottom: 50px;
+}
+
+.menu-card {
+    background: #fff;
+    border: 2px solid #ddd;
+    box-shadow: 5px 5px 0px #ccc;
+}
+
+.menu-card img {
+    width: 100%;
+    height: 220px;
+}
+
+.card-info { 
+    padding: 20px;  
+}
+
+.item-title { 
+    display: flex; 
+    justify-content: space-between; 
+    font-weight: 900; 
+    text-transform: uppercase; 
+}
+
+.price { 
+    color: #ff0000; 
+}
+
+footer {
+    background: #FCFFD5; 
+    color: #000000; 
+    text-align: center; 
+}
+
+@media (max-width: 900px) { 
+    .menu-grid { grid-template-columns: 1fr 1fr; } 
+}
+
