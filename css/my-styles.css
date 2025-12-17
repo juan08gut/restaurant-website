@@ -1,7 +1,4 @@
 * {
-    margin: 0;
-    padding: 0;
-    font-family: 'Georgia', serif;
     box-sizing: border-box;
 }
 
@@ -10,19 +7,17 @@ body {
     line-height: 1.6;
     color: #000000;
     background-color: #ffffff;
+    margin: 0;
 }
 
-.container {
-    max-width: 1200px;
-    margin: auto;
-    padding: 30px 30px;
-    font-size: 20px;
-}
-
-h2 {
-    text-align: center;
+h1{
     font-size: 40px;
+    font-family: 'Georgia', serif;
+}
+h2 {
     text-transform: uppercase;
+    font-size: 40px;
+    font-family: 'Georgia', serif;
 }
 
 hr {
@@ -33,38 +28,37 @@ hr {
     margin: 10px auto 40px;
 }
 
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.my-navbar {
+    background-color: #FCFFD5 !important;
     padding: 10px 50px;
-    background:#FCFFD5;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
 }
 
-.navbar .logo { 
+.logo { 
     color: #ff0000;  
     font-family: 'Brush Script MT', cursive;
     font-weight: bold;
     font-size: 50px;
-}
-.nav-links { 
-    list-style: none; display: flex; 
-}
-.nav-links li { 
-    margin-left: 20px; 
-}
-.nav-links a { 
-    text-decoration: none; 
-    color: #000000; 
-    text-transform: uppercase;
-    font-weight: bold;
+    display: flex; 
+    align-items: center;
 }
 
-.nav-links a:hover { 
-    color: #ff0000; 
+.logo img {
+    height: 80px;
+    margin-right: 10px;
+}
+
+.nav-link { 
+    text-decoration: none; 
+    color: #000000 !important; 
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: 'Georgia', serif;
+    background-color: transparent !important;
+}
+
+.nav-link:hover { 
+    color: #ff0000 !important; 
+    background-color: transparent !important;
 }
 
 .welcome-section {
@@ -81,25 +75,24 @@ hr {
 }
 
 .hero-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
+    background: rgba(0,0,0,0.6); 
+    color: #FCFFD5;
+    padding: 40px;
     width: 100%;
     height: 100%;
-    background: rgba(0,0,0,0.6); 
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: #FCFFD5;
-    text-align: center;
 }
 
 .hero-content h1 { 
     font-size: 65px;
- }
+    margin: 0;
+}
 
-.hero-content p 
-{ font-size: 20px; 
+.hero-content p { 
+    font-size: 20px; 
     margin-bottom: 20px; 
 }
 
@@ -110,9 +103,11 @@ hr {
     padding: 15px 40px;
     text-decoration: none;
     font-size: 1.2rem;
+    border: none;
 }
 .btn:hover {
     background: #cc0000;
+    color: #FCFFD5;
 }
 
 .course-header {
@@ -121,28 +116,29 @@ hr {
     padding: 10px 20px;
     display: inline-block;
     margin: 30px 0 20px;
-}
-
-.menu-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
-    margin-bottom: 50px;
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
 }
 
 .menu-card {
     background: #fff;
     border: 2px solid #ddd;
     box-shadow: 5px 5px 0px #ccc;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 .menu-card img {
     width: 100%;
     height: 220px;
+    object-fit: cover;
 }
 
 .card-info { 
-    padding: 20px;  
+    padding: 20px;
+    flex-grow: 1; 
 }
 
 .item-title { 
@@ -156,13 +152,18 @@ hr {
     color: #ff0000; 
 }
 
-footer {
+.contact-section {
     background: #FCFFD5; 
     color: #000000; 
-    text-align: center; 
 }
 
-@media (max-width: 900px) { 
-    .menu-grid { grid-template-columns: 1fr 1fr; } 
+.menu-grid-row {
+    display: flex;
+    flex-wrap: wrap;
 }
 
+.menu-grid-row > .w3-third,
+.menu-grid-row > .w3-quarter {
+    display: flex;
+    flex-direction: column;
+}
